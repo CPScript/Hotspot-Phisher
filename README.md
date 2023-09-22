@@ -15,4 +15,5 @@
 
 
 ##### Extra
-|CPScript isn't responsible for your actions|
+| CPScript isn't responsible for your actions |
+| MIT Licence |
