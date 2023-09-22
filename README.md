@@ -1,4 +1,4 @@
-# HS
+# HSphish
 ## (HotSpot phishing tool)
 
 ### How to use:
