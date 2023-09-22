@@ -12,3 +12,6 @@
 * Windows: ❌
 * Termux: ➖ (requires sudo cammand)
 * Linux: ✅
+
+
+|CPScript isn't responsible for your actions|
