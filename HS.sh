@@ -19,8 +19,7 @@ function display_banner {
      \/     \/
 Hotspot (phishing tool) 
 EOF
-  echo -e "$yellow-+-$white Coded by:$red @HxRofo $yellow-+-\n $nc"
-  echo -e "$green</>$red | Recoded by:$white @CPScript $red | $green</>\n $nc"
+  echo -e "$green</>$red | By:$white @CPScript $red | $green</>\n $nc"
   sleep 5
 }
 
